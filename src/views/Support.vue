@@ -1,34 +1,34 @@
 <template>
-  <article class="home">
+  <article class="support">
     <portal to="base-header">
       <span class="header-title" v-text="headerTitle" />
     </portal>
 
-    <home-default />
+    <support-default />
 
     <portal to="base-footer">
-      <span class="flex justify-center items-center">Home footer content</span>
+      <span class="flex justify-center items-center"
+        >Support footer content</span
+      >
     </portal>
   </article>
 </template>
 
 <script>
 import { ref } from "vue";
-import HomeDefault from "@/components/content/HomeDefault.vue";
+import SupportDefault from "@/components/content/SupportDefault.vue";
 
 export default {
-  name: "Home",
-  
   components: {
-    HomeDefault,
+    SupportDefault,
   },
 
   setup() {
-    const headerTitle = ref('Home article')
+    const headerTitle = ref("Support article");
 
     return {
       headerTitle,
-    }
-  }
+    };
+  },
 };
 </script>
